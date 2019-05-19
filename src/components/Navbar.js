@@ -1,20 +1,35 @@
-import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import React from 'react';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import TypoGraphy from '@material-ui/core/Typography'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import {Home, Book, AccountBox} from '@material-ui/icons'
 
 
-const Navbar = () => {
+function Navbar (props) {
     return (
-        <div>
-            <AppBar position ="static">
-                <Toolbar>
-                    <Typography>
-                        Material-UI Sample Application tools
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-        </div>
+        <List component = 'nav'>
+            <ListItem component='div'>
+            <ListItemText inset>
+                    <TypoGraphy color="inherit" variant="title">
+                        Home <Home />
+               </TypoGraphy>
+            </ListItemText>
+
+            <ListItemText inset>
+                    <TypoGraphy color="inherit" variant="title">
+                        About Us <Book />
+                    </TypoGraphy>
+            </ListItemText>
+
+            <ListItemText inset>
+                    <TypoGraphy color="inherit" variant="title">
+                        Find out more <AccountBox />
+               </TypoGraphy>
+                </ListItemText>
+            </ListItem>
+        </List>
     )
 }
 
